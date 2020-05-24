@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="HhU-0I-zHx">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Clock-Workg-->
+        <scene sceneID="IXh-2o-sAV">
+            <objects>
+                <viewController id="pJG-cm-Rkh" customClass="FirstViewController" customModule="Clock_Work" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Wdl-Fq-nHA">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="PdQ-mN-K3Y">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CF9-uG-D09">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="269.5"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rectangle 7" translatesAutoresizingMaskIntoConstraints="NO" id="TZw-Wo-BsT">
+                                                <rect key="frame" x="0.0" y="20" width="414" height="229.5"/>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ReN-dO-4Nw">
+                                                <rect key="frame" x="8" y="8" width="398" height="253.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="TZw-Wo-BsT" firstAttribute="centerX" secondItem="CF9-uG-D09" secondAttribute="centerX" id="180-QH-Cos"/>
+                                            <constraint firstItem="ReN-dO-4Nw" firstAttribute="top" secondItem="CF9-uG-D09" secondAttribute="topMargin" id="7dg-UX-hD1"/>
+                                            <constraint firstItem="TZw-Wo-BsT" firstAttribute="centerY" secondItem="ReN-dO-4Nw" secondAttribute="centerY" id="8a5-lf-X6R"/>
+                                            <constraint firstItem="TZw-Wo-BsT" firstAttribute="leading" secondItem="CF9-uG-D09" secondAttribute="leading" id="CPd-w2-NvG"/>
+                                            <constraint firstAttribute="trailingMargin" secondItem="ReN-dO-4Nw" secondAttribute="trailing" id="Cmv-vG-6DZ"/>
+                                            <constraint firstItem="TZw-Wo-BsT" firstAttribute="top" secondItem="CF9-uG-D09" secondAttribute="top" constant="20" id="FQI-5I-BOU"/>
+                                            <constraint firstAttribute="trailing" secondItem="TZw-Wo-BsT" secondAttribute="trailing" id="ZkG-6k-MJt"/>
+                                            <constraint firstItem="TZw-Wo-BsT" firstAttribute="centerX" secondItem="ReN-dO-4Nw" secondAttribute="centerX" id="hQd-vI-Meb"/>
+                                            <constraint firstAttribute="bottomMargin" secondItem="ReN-dO-4Nw" secondAttribute="bottom" id="huw-fp-5FP"/>
+                                            <constraint firstItem="TZw-Wo-BsT" firstAttribute="centerY" secondItem="CF9-uG-D09" secondAttribute="centerY" id="lP8-tq-z4q"/>
+                                            <constraint firstItem="ReN-dO-4Nw" firstAttribute="leading" secondItem="CF9-uG-D09" secondAttribute="leadingMargin" id="pYe-wz-GMk"/>
+                                        </constraints>
+                                    </view>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="72" translatesAutoresizingMaskIntoConstraints="NO" id="Far-KI-yN7">
+                                        <rect key="frame" x="9" y="269.5" width="396" height="269"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ciI-7W-Bf9" userLabel="Clock in">
+                                                <rect key="frame" x="0.0" y="0.0" width="162" height="269"/>
+                                                <state key="normal" image="Clock in"/>
+                                                <connections>
+                                                    <action selector="clockinWasPressed:" destination="pJG-cm-Rkh" eventType="touchUpInside" id="cqv-ta-D2F"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eth-45-rzT" userLabel="Clock out">
+                                                <rect key="frame" x="234" y="0.0" width="162" height="269"/>
+                                                <state key="normal" image="Clock out"/>
+                                                <connections>
+                                                    <action selector="clockoutWasPressed:" destination="pJG-cm-Rkh" eventType="touchUpInside" id="gxr-bs-dVs"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="bottom" spacing="62" translatesAutoresizingMaskIntoConstraints="NO" id="MFg-Zc-dP5">
+                                        <rect key="frame" x="14.5" y="538.5" width="385" height="269.5"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="33d-rE-zxD" userLabel="Info">
+                                                <rect key="frame" x="0.0" y="211.5" width="58" height="58"/>
+                                                <state key="normal" image="info button"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zca-O0-Z0u" userLabel="Plus">
+                                                <rect key="frame" x="120" y="211.5" width="145" height="58"/>
+                                                <state key="normal" image="plis button"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0gD-6L-Dxx" userLabel="Settings">
+                                                <rect key="frame" x="327" y="211.5" width="58" height="58"/>
+                                                <state key="normal" image="settings Button"/>
+                                                <connections>
+                                                    <segue destination="3Gt-LF-yag" kind="show" identifier="goToSettings" id="OmQ-90-xVx"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="CF9-uG-D09" firstAttribute="leading" secondItem="PdQ-mN-K3Y" secondAttribute="leadingMargin" id="i8Z-0P-tAT"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="PdQ-mN-K3Y" firstAttribute="leading" secondItem="I3b-J2-sTl" secondAttribute="leading" id="Ao4-Ga-eyf"/>
+                            <constraint firstItem="PdQ-mN-K3Y" firstAttribute="trailing" secondItem="I3b-J2-sTl" secondAttribute="trailing" id="E2O-NI-TDE"/>
+                            <constraint firstItem="PdQ-mN-K3Y" firstAttribute="top" secondItem="I3b-J2-sTl" secondAttribute="top" id="VcH-5a-Haw"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="PdQ-mN-K3Y" secondAttribute="bottom" id="W0j-IB-4bA"/>
+                            <constraint firstItem="PdQ-mN-K3Y" firstAttribute="centerX" secondItem="Wdl-Fq-nHA" secondAttribute="centerX" id="lj9-GC-y6s"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="I3b-J2-sTl"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Clock-Workg" id="oSY-lS-Qle"/>
+                    <connections>
+                        <outlet property="infoLabel" destination="ReN-dO-4Nw" id="bif-ni-bKG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="me9-EV-b0Q" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1913.0434782608697" y="59.598214285714285"/>
+        </scene>
+        <!--Settings View Controller-->
+        <scene sceneID="yfb-G6-SL0">
+            <objects>
+                <viewController id="3Gt-LF-yag" customClass="SettingsViewController" customModule="Clock_Work" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="G8g-7K-5xr">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="MgH-fJ-w7z">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="AIC-Im-Ai9">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="202"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vB9-7O-U3F">
+                                                <rect key="frame" x="0.0" y="0.0" width="207" height="202"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="petron button" translatesAutoresizingMaskIntoConstraints="NO" id="7yi-AV-HBN" userLabel="petrol button">
+                                                        <rect key="frame" x="13" y="8" width="180" height="270"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    </imageView>
+                                                    <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Per Shift" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="S6H-ON-A1E">
+                                                        <rect key="frame" x="55" y="126" width="97" height="34"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits" keyboardType="decimalPad" returnKeyType="continue" enablesReturnKeyAutomatically="YES"/>
+                                                        <connections>
+                                                            <action selector="petrolAmount:" destination="3Gt-LF-yag" eventType="editingDidEnd" id="JKL-pE-gBp"/>
+                                                        </connections>
+                                                    </textField>
+                                                </subviews>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lZ9-3P-7av">
+                                                <rect key="frame" x="207" y="0.0" width="207" height="202"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Wage buttton" translatesAutoresizingMaskIntoConstraints="NO" id="NK5-uF-spC">
+                                                        <rect key="frame" x="13" y="8" width="180" height="270"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    </imageView>
+                                                    <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Per hour" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6yw-Vz-Qqf">
+                                                        <rect key="frame" x="55" y="126" width="97" height="34"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits" keyboardType="decimalPad" returnKeyType="continue" enablesReturnKeyAutomatically="YES"/>
+                                                        <connections>
+                                                            <action selector="wageAmount:" destination="3Gt-LF-yag" eventType="editingDidEnd" id="ciu-bh-soG"/>
+                                                        </connections>
+                                                    </textField>
+                                                </subviews>
+                                            </view>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="vB9-7O-U3F" secondAttribute="bottom" id="6Bm-43-uqs"/>
+                                            <constraint firstItem="lZ9-3P-7av" firstAttribute="top" secondItem="AIC-Im-Ai9" secondAttribute="top" id="Fg3-K7-RQE"/>
+                                            <constraint firstAttribute="trailing" secondItem="lZ9-3P-7av" secondAttribute="trailing" id="V83-Nv-Jeq"/>
+                                            <constraint firstItem="vB9-7O-U3F" firstAttribute="leading" secondItem="AIC-Im-Ai9" secondAttribute="leading" id="XWu-HU-07p"/>
+                                            <constraint firstItem="vB9-7O-U3F" firstAttribute="top" secondItem="AIC-Im-Ai9" secondAttribute="top" id="bI6-7u-OBv"/>
+                                            <constraint firstAttribute="bottom" secondItem="lZ9-3P-7av" secondAttribute="bottom" id="hpn-oA-JfO"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="lEm-k8-I9q">
+                                        <rect key="frame" x="0.0" y="202" width="414" height="202"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cpE-Au-PqW" userLabel="Contract button">
+                                                <rect key="frame" x="0.0" y="0.0" width="207" height="202"/>
+                                                <state key="normal" image="Contract Israeli"/>
+                                                <connections>
+                                                    <action selector="contractWasPressed:" destination="3Gt-LF-yag" eventType="touchUpInside" id="aLU-Oe-ojs"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DMy-5g-Gs5" userLabel="Extra hours button">
+                                                <rect key="frame" x="207" y="0.0" width="207" height="202"/>
+                                                <state key="normal" image="Extra hours off"/>
+                                                <connections>
+                                                    <action selector="extraHoursWasPressed:" destination="3Gt-LF-yag" eventType="touchUpInside" id="D8x-Ok-L8F"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b9z-6C-RQH">
+                                        <rect key="frame" x="0.0" y="404" width="414" height="202"/>
+                                        <state key="normal" image="reset"/>
+                                        <connections>
+                                            <action selector="resetWasPressed:" destination="3Gt-LF-yag" eventType="touchUpInside" id="vW4-ax-vKm"/>
+                                        </connections>
+                                    </button>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="bottom" spacing="62" translatesAutoresizingMaskIntoConstraints="NO" id="PcF-fK-Vt7">
+                                        <rect key="frame" x="0.0" y="606" width="414" height="202"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oI2-lo-PQc" userLabel="Info">
+                                                <rect key="frame" x="0.0" y="144" width="62.5" height="58"/>
+                                                <state key="normal" image="info button"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6OL-yg-h75" userLabel="Plus">
+                                                <rect key="frame" x="124.5" y="144" width="156" height="58"/>
+                                                <state key="normal" image="plis button"/>
+                                                <connections>
+                                                    <action selector="plusButtonPressed:" destination="3Gt-LF-yag" eventType="touchUpInside" id="vAN-Zh-Rpl"/>
+                                                    <segue destination="pJG-cm-Rkh" kind="show" id="YRu-yC-BRn"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sWk-cG-lrY" userLabel="Settings">
+                                                <rect key="frame" x="342.5" y="144" width="71.5" height="58"/>
+                                                <state key="normal" image="settings Button"/>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="MgH-fJ-w7z" firstAttribute="top" secondItem="G8g-7K-5xr" secondAttribute="top" id="QRf-YP-CZl"/>
+                            <constraint firstItem="MgH-fJ-w7z" firstAttribute="leading" secondItem="FqQ-Wq-I5X" secondAttribute="leading" id="XKn-oC-aiw"/>
+                            <constraint firstItem="FqQ-Wq-I5X" firstAttribute="bottom" secondItem="MgH-fJ-w7z" secondAttribute="bottom" id="gdG-Lf-WvX"/>
+                            <constraint firstItem="FqQ-Wq-I5X" firstAttribute="trailing" secondItem="MgH-fJ-w7z" secondAttribute="trailing" id="yID-KM-aXs"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="FqQ-Wq-I5X"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="6Pg-kx-rEf"/>
+                    <connections>
+                        <outlet property="contractImage" destination="cpE-Au-PqW" id="a6s-2r-IRf"/>
+                        <outlet property="extrahoursImage" destination="DMy-5g-Gs5" id="zTa-Np-vlV"/>
+                        <outlet property="petrolValue" destination="S6H-ON-A1E" id="BBM-xu-bQ1"/>
+                        <outlet property="wageValue" destination="6yw-Vz-Qqf" id="3OS-qG-Eoc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nhZ-Xp-3Wc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3097.1014492753625" y="60.9375"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="HEz-Ju-urI">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="HhU-0I-zHx" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="b7o-Ir-ZTL">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="pJG-cm-Rkh" kind="relationship" relationship="rootViewController" id="gsM-2g-3hl"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="v1l-Ef-ZYm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1002.8985507246377" y="59.598214285714285"/>
+        </scene>
+    </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="gsM-2g-3hl"/>
+    </inferredMetricsTieBreakers>
+    <resources>
+        <image name="Clock in" width="162" height="74"/>
+        <image name="Clock out" width="162" height="74"/>
+        <image name="Contract Israeli" width="162" height="116"/>
+        <image name="Extra hours off" width="162" height="116"/>
+        <image name="Rectangle 7" width="158" height="69.5"/>
+        <image name="Wage buttton" width="162" height="116"/>
+        <image name="info button" width="58" height="58"/>
+        <image name="petron button" width="162" height="116"/>
+        <image name="plis button" width="145" height="58"/>
+        <image name="reset" width="162" height="116"/>
+        <image name="settings Button" width="58" height="58"/>
+    </resources>
+</document>
