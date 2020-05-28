@@ -133,5 +133,20 @@ class FirstViewController: UIViewController {
             times.first?.monthlySalary = monthSalary
         }
     }
+    
+    @IBAction func infoWasPressed(_ sender: UIButton) {
+        let alert = UIAlertController(title: "Legal", message: "Privacy policy and term and conditions", preferredStyle: .actionSheet)
+        alert.addAction(UIAlertAction(title: "Pricacy", style: .default, handler: { (alert) in
+            let url = URL(string: "https://clock-work.flycricket.io/privacy.html")
+            UIApplication.shared.open(url!, options: [:], completionHandler: nil)
+        }))
+        alert.addAction(UIAlertAction(title: "Terms and conditions", style: .default, handler: { (alert) in
+            let url = URL(string: "https://clock-work.flycricket.io/terms.html")
+            UIApplication.shared.open(url!, options: [:], completionHandler: nil)
+        }))
+        present(alert, animated: true)
+    }
+    
+    
 }
 
